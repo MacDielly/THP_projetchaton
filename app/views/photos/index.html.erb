@@ -1,0 +1,12 @@
+<h1>Bienvenu sur notre site de photos de chatons!</h1>
+
+<% @photos.each do |photo| %>
+  <h2><%= photo.title %></h2>
+  <p><%= image_tag(photo.url) %></p>
+  <h4><%= photo.price %>€</h4>
+  <p><%= photo.description %></p>
+<% end %>
+<br>
+<br>
+<p>Photos#index</p>
+<p>Find me in app/views/photos/index.html.erb</p>
