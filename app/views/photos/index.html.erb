@@ -1,11 +1,26 @@
-<h1>Bienvenu sur notre site de photos de chatons!</h1>
-
-<% @photos.each do |photo| %>
-  <h2><%= photo.title %></h2>
-  <p><%= image_tag(photo.url) %></p>
-  <h4><%= photo.price %>€</h4>
-  <p><%= photo.description %></p>
-<% end %>
+<div class="container px-4" id="cards">
+  <h2 class="pb-2 border-bottom">Bienvenue sur notre étale de photos de chatons!</h2>
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <% @photos.each do |photo| %>
+      <div class="col">
+        <div class="d-flex flex-column h-100 p-5 pb-3 card mb-3" style="width: 18rem;">
+          <h3 class="card-header"><%= photo.title %></h3>
+          <div class="card-body">
+            <h6 class="card-title">Format: 29,7 x 42 cm</h6>
+          </div>
+          <img><%= image_tag(photo.url) %></img>
+        <div class="card-body">
+          <p class="card-text"><%= photo.description %></p>
+          <p><%= photo.price %>€</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="card-link">Add to the cart ?</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+</div>
 <br>
 <br>
 <p>Photos#index</p>

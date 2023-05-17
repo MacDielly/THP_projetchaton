@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  get 'photos/index'
-  get 'photos/show'
+  # get 'carts/show'
+  resources :carts, only: [:show]
+  # get 'photos/index'
+  resources :photos, only: [:show, :index]
+  # get 'photos/show'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -1,2 +1,26 @@
+<div class="container px-4" id="cards">
+  <h2 class="pb-2 border-bottom">Super, une seule photo!</h2>
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <div class="col">
+      <div class="d-flex flex-column h-100 p-5 pb-3 card mb-3" style="width: 18rem;">
+        <h3 class="card-header"><%= @photo.title %></h3>
+        <div class="card-body">
+          <h5 class="card-title">Picture printed with amour</h5>
+          <h6 class="card-subtitle text-muted">Format: 29,7 x 42 cm</h6>
+        </div>
+        <img><%= image_tag(@photo.url) %></img>
+      <div class="card-body">
+        <p class="card-text"><%= @photo.description %></p>
+        <p><%= @photo.price %>€</p>
+      </div>
+      <div class="card-footer">
+        <a href="#" class="card-link">Add to the cart ?</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
 <p>Photos#show</p>
 <p>Find me in app/views/photos/show.html.erb</p>

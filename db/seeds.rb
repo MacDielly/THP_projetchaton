@@ -18,3 +18,10 @@ photo = Photo.create!(
   url: "https://source.unsplash.com/300x300/?kitten" 
 )
 puts photo
+
+20.times do 
+  Photo.create!(title: Faker::Name.name,
+              description: Faker::Lorem.sentence,
+              price: Faker::Commerce.price,
+              url: "https://loremflickr.com/320/240?lock=#{rand(1..1000)}")
+end
